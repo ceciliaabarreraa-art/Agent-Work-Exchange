@@ -1,0 +1,6 @@
+{
+  "name": "agent-marketplace-tools",
+  "private": true,
+  "type": "module",
+  "dependencies": { "near-api-js": "7.3.1" }
+}
