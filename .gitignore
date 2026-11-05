@@ -1,8 +1,0 @@
-node_modules/
-target/
-.env
-.env.*
-!.env.example
-.secrets/
-*.wasm
-.DS_Store
