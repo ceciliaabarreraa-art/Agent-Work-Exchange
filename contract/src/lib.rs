@@ -1,6 +1,6 @@
 use near_sdk::{
     env, near, AccountId, Gas, NearToken, PanicOnDefault, Promise, PromiseError,
-    borsh::{self, BorshDeserialize, BorshSerialize},
+    borsh::{BorshDeserialize, BorshSerialize},
     collections::{LookupMap, UnorderedMap},
     json_types::U128,
 };
@@ -10,12 +10,14 @@ const FEE_BPS: u16 = 200; // 2% of the gross order amount.
 const BPS_DENOMINATOR: u128 = 10_000;
 const CALLBACK_GAS: Gas = Gas::from_tgas(5);
 
-#[derive(BorshDeserialize, BorshSerialize, Serialize, Deserialize, Clone, PartialEq)]
+#[derive(BorshDeserialize, BorshSerialize, Serialize, Deserialize, Clone, PartialEq, Debug)]
 #[serde(crate = "near_sdk::serde")]
+#[borsh(crate = "near_sdk::borsh")]
 pub enum OrderStatus { Funded, Delivered, Released, Refunded }
 
-#[derive(BorshDeserialize, BorshSerialize, Serialize, Deserialize, Clone)]
+#[derive(BorshDeserialize, BorshSerialize, Serialize, Deserialize, Clone, Debug)]
 #[serde(crate = "near_sdk::serde")]
+#[borsh(crate = "near_sdk::borsh")]
 pub struct Order {
     pub id: u64,
     pub buyer: AccountId,
@@ -27,8 +29,7 @@ pub struct Order {
     pub status: OrderStatus,
     pub delivery_hash: Option<String>,
     pub delivery_ref: Option<String>,
-}
-
+}  
 #[near(contract_state)]
 #[derive(PanicOnDefault)]
 pub struct Contract {
