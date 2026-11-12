@@ -1,0 +1,2 @@
+id,title,description,link,image_link,price,availability,condition,brand,gtin
+SYN-001,Producto de prueba 1,Descripcion sintetica 1,https://shop.example.invalid/p/SYN-001,https://shop.example.invalid/i/SYN-001.jpg,24.90 USD,in_stock,new,Marca ficticia,
