@@ -1,0 +1,61 @@
+{
+  "fecha_local_indicada": "2026-11-09",
+  "reloj_sandbox_observado_utc": "2026-11-10T12:59:10.421939+00:00",
+  "advertencia_reloj": "El reloj observado difiere de la fecha local indicada; no usar para inferir vigencias.",
+  "resultados": {
+    "motor": "39/39",
+    "discovery": "9/9",
+    "demo_A2A_consola": "8/8",
+    "demo_self_service_HTTP": "8/8",
+    "browser_automatizado": "no ejecutado",
+    "consulta_Testnet": "solo lectura; 0 transacciones"
+  },
+  "enlaces_locales_verificados": 46,
+  "enlaces_locales_faltantes": [],
+  "excepcion_antes_de_empaquetar": "SHA256SUMS.txt se genera después de este informe",
+  "archivos_json_validados": 11,
+  "json_invalidos": [],
+  "barrido_de_secretos": "Sin coincidencias en patrones de alta confianza para claves privadas, tokens de GitHub y Stripe; no es auditoría exhaustiva. La clave HMAC de demo es pública y ficticia.",
+  "coincidencias_secretos_patrones": [],
+  "hashes_fuentes_playground": {
+    "04_Motor/results/playground_incremental.json": {
+      "cloud_worker.mjs": {
+        "sha256": "d2edc37c625962060a79a0cd083ce20751797e4a6c083185126a5e8df00eb944",
+        "coincide_medicion": true
+      },
+      "incremental_parser.mjs": {
+        "sha256": "59be3b24b5bfeea344050a881cdac7d3054eb6213d60dd9a8df0653134f92016",
+        "coincide_medicion": true
+      },
+      "engine.mjs": {
+        "sha256": "a1d8c471fc34d1cd21bc57bb3cbd5797d8c51c400d442f46ab34413a1f63c2d1",
+        "coincide_medicion": true
+      },
+      "delimited.mjs": {
+        "sha256": "da9e3573184058f5df73d833f0d023e960a831694c52be15e2a546c52abc5a08",
+        "coincide_medicion": true
+      }
+    },
+    "04_Motor/results/playground_muestras_1_fila.json": {
+      "cloud_worker.mjs": {
+        "sha256": "d2edc37c625962060a79a0cd083ce20751797e4a6c083185126a5e8df00eb944",
+        "coincide_medicion": true
+      },
+      "incremental_parser.mjs": {
+        "sha256": "59be3b24b5bfeea344050a881cdac7d3054eb6213d60dd9a8df0653134f92016",
+        "coincide_medicion": true
+      },
+      "engine.mjs": {
+        "sha256": "a1d8c471fc34d1cd21bc57bb3cbd5797d8c51c400d442f46ab34413a1f63c2d1",
+        "coincide_medicion": true
+      },
+      "delimited.mjs": {
+        "sha256": "da9e3573184058f5df73d833f0d023e960a831694c52be15e2a546c52abc5a08",
+        "coincide_medicion": true
+      }
+    }
+  },
+  "iteracion_3_zip_sha256": "95fcbf0dbe36c79027adf136b59ef723eabfd356c37d14f6f36bf27f4cdee71d",
+  "repositorio_marketplace_referencia": "solo lectura, HEAD e867ec1ca34fa3532900fc541f42ffd267eb0f44",
+  "nota_integridad": "Manifiesto excluye a sí mismo y al ZIP; el verificador adjunto comprueba ambos después de empaquetar."
+}
