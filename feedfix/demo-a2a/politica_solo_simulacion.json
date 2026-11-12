@@ -1,0 +1,22 @@
+{
+  "mode": "SYNTHETIC_ONLY",
+  "policy_id": "POLITICA_FICTICIA_NO_APROBADA_PARA_NEGOCIO",
+  "identity": "FeedFix Sales, agente de IA (identidad ficticia de demostración)",
+  "capabilities_enabled": ["CSV_TSV_INCREMENTAL_1M_500", "CONDITION_CANONICAL_V1", "AUTHORIZED_PRICE_AND_AVAILABILITY_WITH_SIMULATED_EVIDENCE"],
+  "max_feed_bytes": 1048576,
+  "max_rows": 500,
+  "max_quotes_per_run": 3,
+  "max_emails_per_run": 0,
+  "max_discount_bps": 0,
+  "currency": "USD",
+  "price_tiers_demo_cents": [
+    {"up_to_rows": 25, "price_cents": 2900},
+    {"up_to_rows": 100, "price_cents": 5900},
+    {"up_to_rows": 500, "price_cents": 9900}
+  ],
+  "marketplace_fee_demo_bps": 500,
+  "artificially_allow_simulated_escrow_for_partial_artifact": true,
+  "real_payment_enabled": false,
+  "real_email_enabled": false,
+  "real_near_signing_enabled": false
+}

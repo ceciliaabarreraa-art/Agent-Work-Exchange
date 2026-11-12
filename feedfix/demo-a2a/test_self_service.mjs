@@ -1,0 +1,16 @@
+import {test,before,after} from 'node:test';
+import assert from 'node:assert/strict';
+import {createDemoServer} from './servidor_local.mjs';
+import {sha256} from './lib.mjs';
+let server,base,one,six,job,receipt;
+before(async()=>{server=createDemoServer();await new Promise(r=>server.listen(0,'127.0.0.1',r));base=`http://127.0.0.1:${server.address().port}`;});
+after(async()=>{await new Promise((r,j)=>server.close(e=>e?j(e):r()));});
+async function post(path,body){const r=await fetch(base+path,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body)});return [r.status,await r.json()];}
+test('pantalla y fixtures locales declaran simulación',async()=>{let r=await fetch(base+'/');let h=await r.text();assert.equal(r.status,200);assert.match(h,/Laboratorio sintético/);assert.match(h,/NO_APTO/);one=await (await fetch(base+'/fixture-1.csv')).text();six=await(await fetch(base+'/fixture-6.csv')).text();assert.equal(sha256(one),'33e55bb4f43ee20a8674e0439387c7d2f0049bc15abebea3d3c296665271cbc9');});
+test('rechaza por hash datos ajenos o fixture modificado',async()=>{let [s,x]=await post('/api/cotizar',{feed:one+'mi tienda real'});assert.equal(s,400);assert.equal(x.error,'SOLO_SE_ADMITEN_FIXTURES_SINTETICOS_EXACTOS');});
+test('limita tamaño de petición',async()=>{let [s,x]=await post('/api/cotizar',{feed:'x'.repeat(20000)});assert.equal(s,413);assert.equal(x.error,'REQUEST_LIMIT');});
+test('una fila pasa entre dos procesos y recibe cotización ficticia fija',async()=>{let [s,x]=await post('/api/cotizar',{feed:one});assert.equal(s,200);assert.equal(x.phase,'QUOTED_FAKE');assert.equal(x.quote.amount_cents,2900);assert.equal(x.rows,1);assert.equal(x.changes,2);assert.equal(x.issues,0);assert.equal(x.procesos_separados,true);assert.equal(x.real_payment,false);assert.equal(x.on_chain_submission_allowed,false);job=x.job_id;});
+test('seis filas quedan bloqueadas, sin cotización ni pago',async()=>{let [s,x]=await post('/api/cotizar',{feed:six});assert.equal(s,200);assert.equal(x.phase,'BLOCKED');assert.equal(x.issues,5);assert.equal(x.quote,undefined);assert.equal(x.real_payment,false);let [p]=await post('/api/pago-ficticio',{job_id:x.job_id});assert.equal(p,404);});
+test('pago simulado libera y retira solo saldos ficticios',async()=>{let [s,x]=await post('/api/pago-ficticio',{job_id:job});assert.equal(s,200);assert.equal(x.phase,'WITHDRAWN_FAKE');assert.equal(x.amount_cents,2900);assert.equal(x.seller_cents,2755);assert.equal(x.treasury_cents,145);assert.equal(x.real_money_moved,false);assert.equal(x.real_near,false);assert.equal(x.on_chain_submission_allowed,false);assert.equal(x.output_label,'NO_APTO');assert.equal(sha256(x.corrected_feed),x.artifact_sha256);receipt=x;});
+test('repetir pago retorna mismo resultado sin otra transición',async()=>{let [s,x]=await post('/api/pago-ficticio',{job_id:job});assert.equal(s,200);assert.equal(x.replay,true);assert.equal(x.artifact_sha256,receipt.artifact_sha256);assert.equal(x.seller_cents,receipt.seller_cents);});
+test('orden inexistente nunca genera pago',async()=>{let [s,x]=await post('/api/pago-ficticio',{job_id:'demo-inexistente'});assert.equal(s,404);assert.equal(x.error,'ORDEN_FICTICIA_NO_ENCONTRADA');});
