@@ -1,0 +1,14 @@
+test_bands_1_and_2_need_ai (test_discovery.DiscoveryTests.test_bands_1_and_2_need_ai) ... ok
+test_batch3_does_not_require_ai (test_discovery.DiscoveryTests.test_batch3_does_not_require_ai) ... ok
+test_dedup_and_sort (test_discovery.DiscoveryTests.test_dedup_and_sort) ... ok
+test_history_resolved_fails_synthetic (test_discovery.DiscoveryTests.test_history_resolved_fails_synthetic) ... ok
+test_never_treat_keyword_as_real_proof (test_discovery.DiscoveryTests.test_never_treat_keyword_as_real_proof) ... ok
+test_platform_and_credentials_blocked (test_discovery.DiscoveryTests.test_platform_and_credentials_blocked) ... ok
+test_score_0_1_2 (test_discovery.DiscoveryTests.test_score_0_1_2) ... ok
+test_synthetic_rejects_real_domains (test_discovery.DiscoveryTests.test_synthetic_rejects_real_domains) ... ok
+test_us_unverified_fails_synthetic_gate (test_discovery.DiscoveryTests.test_us_unverified_fails_synthetic_gate) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.001s
+
+OK

@@ -1,0 +1,110 @@
+[
+  {
+    "url": "https://startup-demo.invalid/post",
+    "title": "Synthetic startup",
+    "text": "Our store has a Google Merchant Center product feed error. We offer AI-powered shopping software.",
+    "kind": "startup",
+    "store_hint": true,
+    "proofs": {
+      "issue_current_verified": true,
+      "us_verified": true,
+      "site_owner_verified": true,
+      "own_email_verified": true,
+      "within_scope": true,
+      "source_fresh": true,
+      "provider_permitted": true,
+      "sender_approved": true,
+      "not_suppressed": true
+    }
+  },
+  {
+    "url": "https://agency-demo.invalid/post",
+    "title": "Synthetic agency",
+    "text": "Our agency uses artificial intelligence. Our Google shopping feed has an error today.",
+    "kind": "agency",
+    "store_hint": false,
+    "proofs": {
+      "issue_current_verified": true,
+      "us_verified": true,
+      "site_owner_verified": true,
+      "own_email_verified": true,
+      "within_scope": true,
+      "source_fresh": true,
+      "provider_permitted": true,
+      "sender_approved": true,
+      "not_suppressed": true
+    }
+  },
+  {
+    "url": "https://store-demo.invalid/post",
+    "title": "Synthetic store",
+    "text": "Our store has a Google Merchant Center product feed mismatch today.",
+    "kind": "store",
+    "store_hint": true,
+    "proofs": {
+      "issue_current_verified": true,
+      "us_verified": true,
+      "site_owner_verified": true,
+      "own_email_verified": true,
+      "within_scope": true,
+      "source_fresh": true,
+      "provider_permitted": true,
+      "sender_approved": true,
+      "not_suppressed": true
+    }
+  },
+  {
+    "url": "https://resolved-demo.invalid/post",
+    "title": "Synthetic old case",
+    "text": "Our store had a Google Merchant Center feed issue that we resolved.",
+    "kind": "store",
+    "store_hint": true,
+    "proofs": {
+      "issue_current_verified": true,
+      "us_verified": true,
+      "site_owner_verified": true,
+      "own_email_verified": true,
+      "within_scope": true,
+      "source_fresh": true,
+      "provider_permitted": true,
+      "sender_approved": true,
+      "not_suppressed": true
+    }
+  },
+  {
+    "url": "https://not-us-demo.invalid/post",
+    "title": "Synthetic unknown country",
+    "text": "Our store has a Google Merchant Center product feed error.",
+    "kind": "store",
+    "store_hint": true,
+    "proofs": {
+      "issue_current_verified": true,
+      "us_verified": false,
+      "site_owner_verified": true,
+      "own_email_verified": true,
+      "within_scope": true,
+      "source_fresh": true,
+      "provider_permitted": true,
+      "sender_approved": true,
+      "not_suppressed": true
+    }
+  },
+  {
+    "url": "https://generic-demo.invalid/post",
+    "title": "Synthetic no feed problem",
+    "text": "Our store has handmade pottery.",
+    "kind": "store",
+    "store_hint": true,
+    "proofs": {
+      "issue_current_verified": true,
+      "us_verified": true,
+      "site_owner_verified": true,
+      "own_email_verified": true,
+      "within_scope": true,
+      "source_fresh": true,
+      "provider_permitted": true,
+      "sender_approved": true,
+      "not_suppressed": true
+    }
+  }
+]
