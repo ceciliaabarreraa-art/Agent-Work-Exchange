@@ -1,0 +1,206 @@
+TAP version 13
+# Subtest: endpoint Playground sintético bloquea método, ruta, JSON inválido y cuerpo largo sin reflejar
+ok 1 - endpoint Playground sintético bloquea método, ruta, JSON inválido y cuerpo largo sin reflejar
+  ---
+  duration_ms: 36.209674
+  ...
+# Subtest: endpoint parse reproduce estado y registro, y rechaza chunk mayor de 4096
+ok 2 - endpoint parse reproduce estado y registro, y rechaza chunk mayor de 4096
+  ---
+  duration_ms: 3.696341
+  ...
+# Subtest: endpoint batch no autentica el contexto: nunca exponerlo en producción
+ok 3 - endpoint batch no autentica el contexto: nunca exponerlo en producción
+  ---
+  duration_ms: 3.951527
+  ...
+# Subtest: CSV: comillas escapadas, comas, saltos, BOM, CRLF y columnas se conservan semánticamente
+ok 4 - CSV: comillas escapadas, comas, saltos, BOM, CRLF y columnas se conservan semánticamente
+  ---
+  duration_ms: 3.797005
+  ...
+# Subtest: TSV: separadores entrecomillados y líneas internas preservadas
+ok 5 - TSV: separadores entrecomillados y líneas internas preservadas
+  ---
+  duration_ms: 0.4823
+  ...
+# Subtest: CSV rechaza comillas rotas, basura luego del cierre y comillas en no entrecomillados
+ok 6 - CSV rechaza comillas rotas, basura luego del cierre y comillas en no entrecomillados
+  ---
+  duration_ms: 0.670727
+  ...
+# Subtest: rechaza duplicación de cabeceras incluso por mayúsculas o espacios
+ok 7 - rechaza duplicación de cabeceras incluso por mayúsculas o espacios
+  ---
+  duration_ms: 0.234807
+  ...
+# Subtest: rechaza filas con número de columnas distinto y archivo vacío
+ok 8 - rechaza filas con número de columnas distinto y archivo vacío
+  ---
+  duration_ms: 0.329594
+  ...
+# Subtest: rechaza UTF-8 inválido, NUL y sustitutos Unicode sueltos
+ok 9 - rechaza UTF-8 inválido, NUL y sustitutos Unicode sueltos
+  ---
+  duration_ms: 0.281366
+  ...
+# Subtest: límites de ensayo: 500 filas permitidas, 501 y más de 1 MiB bloqueados
+ok 10 - límites de ensayo: 500 filas permitidas, 501 y más de 1 MiB bloqueados
+  ---
+  duration_ms: 5.298798
+  ...
+# Subtest: A: canonicaliza condition solo si regla explícita habilitada
+ok 11 - A: canonicaliza condition solo si regla explícita habilitada
+  ---
+  duration_ms: 3.030052
+  ...
+# Subtest: B: precio y disponibilidad con coincidencia exacta, vigencia y autorización
+ok 12 - B: precio y disponibilidad con coincidencia exacta, vigencia y autorización
+  ---
+  duration_ms: 1.190155
+  ...
+# Subtest: B: sin aprobación no cambia ni precio ni disponibilidad
+ok 13 - B: sin aprobación no cambia ni precio ni disponibilidad
+  ---
+  duration_ms: 1.55558
+  ...
+# Subtest: B: autorización revocada, vencida o con campo no permitido no habilita ese cambio
+ok 14 - B: autorización revocada, vencida o con campo no permitido no habilita ese cambio
+  ---
+  duration_ms: 1.303976
+  ...
+# Subtest: B: fuente vencida o futura se bloquea
+ok 15 - B: fuente vencida o futura se bloquea
+  ---
+  duration_ms: 0.88427
+  ...
+# Subtest: B: no usa variante distinta, moneda ni mercado distintos
+ok 16 - B: no usa variante distinta, moneda ni mercado distintos
+  ---
+  duration_ms: 0.890915
+  ...
+# Subtest: B: fuente duplicada o contradictoria bloquea; jamás elige una por orden
+ok 17 - B: fuente duplicada o contradictoria bloquea; jamás elige una por orden
+  ---
+  duration_ms: 0.548655
+  ...
+# Subtest: B: evidencia ausente, múltiple o vencida bloquea cambios
+ok 18 - B: evidencia ausente, múltiple o vencida bloquea cambios
+  ---
+  duration_ms: 1.180734
+  ...
+# Subtest: B: precio no cambia si la página o checkout contradicen la fuente
+ok 19 - B: precio no cambia si la página o checkout contradicen la fuente
+  ---
+  duration_ms: 0.769951
+  ...
+# Subtest: B: disponibilidad ambigua de fuente no se convierte adivinando
+ok 20 - B: disponibilidad ambigua de fuente no se convierte adivinando
+  ---
+  duration_ms: 0.492815
+  ...
+# Subtest: duplicados del feed preservan ambas filas y evitan incluso cambios A
+ok 21 - duplicados del feed preservan ambas filas y evitan incluso cambios A
+  ---
+  duration_ms: 0.761957
+  ...
+# Subtest: GTIN solo comprueba dígito, no inventa ni asegura asignación
+ok 22 - GTIN solo comprueba dígito, no inventa ni asegura asignación
+  ---
+  duration_ms: 0.690818
+  ...
+# Subtest: CSV para planillas protege fórmulas sin cambiar el feed
+ok 23 - CSV para planillas protege fórmulas sin cambiar el feed
+  ---
+  duration_ms: 0.768457
+  ...
+# Subtest: segunda ejecución con misma política y evidencia no duplica modificaciones
+ok 24 - segunda ejecución con misma política y evidencia no duplica modificaciones
+  ---
+  duration_ms: 1.118552
+  ...
+# Subtest: TSV de feed admite reglas B sin modificar otras columnas
+ok 25 - TSV de feed admite reglas B sin modificar otras columnas
+  ---
+  duration_ms: 0.735075
+  ...
+# Subtest: se rechaza el reloj inválido y edades de evidencia superiores a 60 min
+ok 26 - se rechaza el reloj inválido y edades de evidencia superiores a 60 min
+  ---
+  duration_ms: 0.377624
+  ...
+# Subtest: propiedad: 200 tablas CSV/TSV deterministas conservan celdas y orden
+ok 27 - propiedad: 200 tablas CSV/TSV deterministas conservan celdas y orden
+  ---
+  duration_ms: 20.423417
+  ...
+# Subtest: incremental: BOM y UTF-8 multibyte, comillas dobles, CRLF dentro/fuera, puntos de corte 1..31
+ok 28 - incremental: BOM y UTF-8 multibyte, comillas dobles, CRLF dentro/fuera, puntos de corte 1..31
+  ---
+  duration_ms: 10.937157
+  ...
+# Subtest: incremental: TSV, salto CR y sin newline terminal
+ok 29 - incremental: TSV, salto CR y sin newline terminal
+  ---
+  duration_ms: 3.419351
+  ...
+# Subtest: incremental: UTF-8 incompleto final e inválido se rechaza, no se sustituye
+ok 30 - incremental: UTF-8 incompleto final e inválido se rechaza, no se sustituye
+  ---
+  duration_ms: 0.709953
+  ...
+# Subtest: incremental: sintaxis y límites cierran por defecto
+ok 31 - incremental: sintaxis y límites cierran por defecto
+  ---
+  duration_ms: 5.400815
+  ...
+# sha256 feed 500: 10788306a6b3cc3848abe51940567b34b001ee1a425426bef0b82f2734dcefea
+# Subtest: golden 6: lotes 1,2,5 conservan duplicados entre lotes, auditoría y fuente/líneas
+ok 32 - golden 6: lotes 1,2,5 conservan duplicados entre lotes, auditoría y fuente/líneas
+  ---
+  duration_ms: 20.202986
+  ...
+# Subtest: 500 casi 1 MiB: incremental equivale a monolítico incluyendo CSV, auditoría y hallazgos
+ok 33 - 500 casi 1 MiB: incremental equivale a monolítico incluyendo CSV, auditoría y hallazgos
+  ---
+  duration_ms: 393.432321
+  ...
+# Subtest: rechaza conteos globales incompletos o inferiores al lote
+ok 34 - rechaza conteos globales incompletos o inferiores al lote
+  ---
+  duration_ms: 0.240544
+  ...
+# Subtest: propiedad: 100 tablas con Unicode y valores entrecomillados, seis tamaños de bloque
+ok 35 - propiedad: 100 tablas con Unicode y valores entrecomillados, seis tamaños de bloque
+  ---
+  duration_ms: 358.795009
+  ...
+# Subtest: HTTP de ensayo: salud, rutas y cabeceras de no almacenar
+ok 36 - HTTP de ensayo: salud, rutas y cabeceras de no almacenar
+  ---
+  duration_ms: 19.726644
+  ...
+# Subtest: HTTP rechaza tipo no JSON y JSON inválido sin reflejar contenido
+ok 37 - HTTP rechaza tipo no JSON y JSON inválido sin reflejar contenido
+  ---
+  duration_ms: 0.997415
+  ...
+# Subtest: HTTP rechaza UTF-8 inválido y cuerpo superior a 3 MiB
+ok 38 - HTTP rechaza UTF-8 inválido y cuerpo superior a 3 MiB
+  ---
+  duration_ms: 5.677846
+  ...
+# Subtest: HTTP procesa entrada mínima sintética, siempre sin permiso de subida
+ok 39 - HTTP procesa entrada mínima sintética, siempre sin permiso de subida
+  ---
+  duration_ms: 2.156294
+  ...
+1..39
+# tests 39
+# suites 0
+# pass 39
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1239.269883

@@ -1,0 +1,51 @@
+TAP version 13
+# Subtest: incremental: BOM y UTF-8 multibyte, comillas dobles, CRLF dentro/fuera, puntos de corte 1..31
+ok 1 - incremental: BOM y UTF-8 multibyte, comillas dobles, CRLF dentro/fuera, puntos de corte 1..31
+  ---
+  duration_ms: 9.725259
+  ...
+# Subtest: incremental: TSV, salto CR y sin newline terminal
+ok 2 - incremental: TSV, salto CR y sin newline terminal
+  ---
+  duration_ms: 2.323862
+  ...
+# Subtest: incremental: UTF-8 incompleto final e inválido se rechaza, no se sustituye
+ok 3 - incremental: UTF-8 incompleto final e inválido se rechaza, no se sustituye
+  ---
+  duration_ms: 0.486668
+  ...
+# Subtest: incremental: sintaxis y límites cierran por defecto
+ok 4 - incremental: sintaxis y límites cierran por defecto
+  ---
+  duration_ms: 4.107255
+  ...
+# sha256 feed 500: 10788306a6b3cc3848abe51940567b34b001ee1a425426bef0b82f2734dcefea
+# Subtest: golden 6: lotes 1,2,5 conservan duplicados entre lotes, auditoría y fuente/líneas
+ok 5 - golden 6: lotes 1,2,5 conservan duplicados entre lotes, auditoría y fuente/líneas
+  ---
+  duration_ms: 19.41398
+  ...
+# Subtest: 500 casi 1 MiB: incremental equivale a monolítico incluyendo CSV, auditoría y hallazgos
+ok 6 - 500 casi 1 MiB: incremental equivale a monolítico incluyendo CSV, auditoría y hallazgos
+  ---
+  duration_ms: 368.750365
+  ...
+# Subtest: rechaza conteos globales incompletos o inferiores al lote
+ok 7 - rechaza conteos globales incompletos o inferiores al lote
+  ---
+  duration_ms: 0.290525
+  ...
+# Subtest: propiedad: 100 tablas con Unicode y valores entrecomillados, seis tamaños de bloque
+ok 8 - propiedad: 100 tablas con Unicode y valores entrecomillados, seis tamaños de bloque
+  ---
+  duration_ms: 332.138574
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 804.057731
