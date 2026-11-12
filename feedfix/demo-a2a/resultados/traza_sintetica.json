@@ -1,0 +1,113 @@
+{
+  "mode": "SYNTHETIC_ONLY",
+  "scenario": "happy",
+  "actors": [
+    "FeedFix Sales",
+    "FeedFix"
+  ],
+  "operator_interventions_after_start": 0,
+  "buyer": "fixture sintética, no un agente",
+  "real_money_moved": false,
+  "real_email_sent": false,
+  "real_near_transaction": false,
+  "real_marketplace_call": false,
+  "real_on_chain_submission_allowed": false,
+  "result_status": "PARTIAL_REVIEW_REQUIRED",
+  "rows": 1,
+  "changes": 2,
+  "issues": 0,
+  "trace": [
+    {
+      "seq": 1,
+      "mode": "SYNTHETIC_ONLY",
+      "type": "POLITICA_DEMO_PREDEFINIDA",
+      "policy_id": "POLITICA_FICTICIA_NO_APROBADA_PARA_NEGOCIO",
+      "real_payment_enabled": false,
+      "real_email_enabled": false,
+      "real_near_signing_enabled": false
+    },
+    {
+      "seq": 2,
+      "mode": "SYNTHETIC_ONLY",
+      "type": "CLIENTE_FICTICIO_SUBE_FEED",
+      "rows": 1,
+      "input_sha256": "33e55bb4f43ee20a8674e0439387c7d2f0049bc15abebea3d3c296665271cbc9",
+      "note": "El comercio real solo está modelado; no hay formulario ni cuenta real."
+    },
+    {
+      "seq": 3,
+      "mode": "SYNTHETIC_ONLY",
+      "type": "A2A_SALES_CONSULTA_FEEDFIX",
+      "engine_version": "0.4.0-incremental-synthetic",
+      "capabilities": [
+        "CSV_TSV_INCREMENTAL_1M_500",
+        "CONDITION_CANONICAL_V1",
+        "AUTHORIZED_PRICE_AND_AVAILABILITY_WITH_SIMULATED_EVIDENCE"
+      ],
+      "sales_pid": 202,
+      "feedfix_pid": 214,
+      "procesos_separados": true
+    },
+    {
+      "seq": 4,
+      "mode": "SYNTHETIC_ONLY",
+      "type": "A2A_FEEDFIX_PREPARA_ARCHIVO",
+      "rows": 1,
+      "changes": 2,
+      "issues": 0,
+      "status": "PARTIAL_REVIEW_REQUIRED",
+      "output_label": "NO_APTO",
+      "can_submit_real_near": false,
+      "artifact_sha256": "af8615d80b4e3d6ded1728fdb550fc30d1ddfff02eb4568948e58279a626de4f"
+    },
+    {
+      "seq": 5,
+      "mode": "SYNTHETIC_ONLY",
+      "type": "COTIZACION_FICTICIA_POR_TABLA",
+      "amount_cents": 2900,
+      "currency": "USD",
+      "discount_bps": 0,
+      "note": "Precio ficticio no aprobado; NO promesa de aptitud Google."
+    },
+    {
+      "seq": 6,
+      "mode": "SYNTHETIC_ONLY",
+      "type": "LINK_DE_PAGO_FICTICIO",
+      "url": "https://checkout.example.invalid/synthetic/demo-001",
+      "real_link": false
+    },
+    {
+      "seq": 7,
+      "mode": "SYNTHETIC_ONLY",
+      "type": "WEBHOOK_FICTICIO_VERIFICADO",
+      "signature": "HMAC de prueba; no firma de Stripe ni Mercado Pago",
+      "state": "FUNDED_FAKE"
+    },
+    {
+      "seq": 8,
+      "mode": "SYNTHETIC_ONLY",
+      "type": "ENTREGA_FICTICIA",
+      "state": "DELIVERED_FAKE",
+      "artifact_sha256": "af8615d80b4e3d6ded1728fdb550fc30d1ddfff02eb4568948e58279a626de4f",
+      "label": "NO_APTO",
+      "note": "Entrega parcial sintética sin aprobación Google ni autorización on-chain."
+    },
+    {
+      "seq": 9,
+      "mode": "SYNTHETIC_ONLY",
+      "type": "RELEASE_FAKE_SALDOS_INTERNOS",
+      "state": "RELEASED_FAKE",
+      "seller_cents": 2755,
+      "treasury_cents": 145,
+      "note": "Guardia determinista ficticia, no verifier NEAR; contradicción con permiso on-chain evitada: no se envía."
+    },
+    {
+      "seq": 10,
+      "mode": "SYNTHETIC_ONLY",
+      "type": "WITHDRAW_FAKE",
+      "state": "WITHDRAWN_FAKE",
+      "seller_cents": 2755,
+      "note": "Asiento simulado: no es retiro NEAR, transferencia ni dinero."
+    }
+  ]
+}

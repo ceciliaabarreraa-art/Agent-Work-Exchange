@@ -1,0 +1,50 @@
+TAP version 13
+# Subtest: política exige modo sintético y prohíbe flags reales
+ok 1 - política exige modo sintético y prohíbe flags reales
+  ---
+  duration_ms: 1.651419
+  ...
+# Subtest: tabla límites y cupo de cotizaciones, descuentos nulos
+ok 2 - tabla límites y cupo de cotizaciones, descuentos nulos
+  ---
+  duration_ms: 0.421167
+  ...
+# Subtest: webhook falso exige firma, correlación, importe, moneda y estado exactos
+ok 3 - webhook falso exige firma, correlación, importe, moneda y estado exactos
+  ---
+  duration_ms: 1.387997
+  ...
+# Subtest: idempotencia: repetición idéntica no duplica y segundo pago distinto se rechaza
+ok 4 - idempotencia: repetición idéntica no duplica y segundo pago distinto se rechaza
+  ---
+  duration_ms: 0.610277
+  ...
+# Subtest: no entrega ni liberación fake antes de pago o con incidencias/hash malo
+ok 5 - no entrega ni liberación fake antes de pago o con incidencias/hash malo
+  ---
+  duration_ms: 0.491193
+  ...
+# Subtest: release y withdraw son asientos fake idempotencia de etapas
+ok 6 - release y withdraw son asientos fake idempotencia de etapas
+  ---
+  duration_ms: 0.346695
+  ...
+# Subtest: E2E: dos procesos separados, cliente simulado, 0 intervención, sin dinero ni NEAR
+ok 7 - E2E: dos procesos separados, cliente simulado, 0 intervención, sin dinero ni NEAR
+  ---
+  duration_ms: 86.674388
+  ...
+# Subtest: caso bloqueado no cobra ni libera incluso en demo
+ok 8 - caso bloqueado no cobra ni libera incluso en demo
+  ---
+  duration_ms: 78.713069
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 232.291185

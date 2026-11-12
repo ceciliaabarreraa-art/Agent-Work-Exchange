@@ -1,0 +1,50 @@
+TAP version 13
+# Subtest: pantalla y fixtures locales declaran simulación
+ok 1 - pantalla y fixtures locales declaran simulación
+  ---
+  duration_ms: 38.35616
+  ...
+# Subtest: rechaza por hash datos ajenos o fixture modificado
+ok 2 - rechaza por hash datos ajenos o fixture modificado
+  ---
+  duration_ms: 7.881693
+  ...
+# Subtest: limita tamaño de petición
+ok 3 - limita tamaño de petición
+  ---
+  duration_ms: 5.062775
+  ...
+# Subtest: una fila pasa entre dos procesos y recibe cotización ficticia fija
+ok 4 - una fila pasa entre dos procesos y recibe cotización ficticia fija
+  ---
+  duration_ms: 40.900829
+  ...
+# Subtest: seis filas quedan bloqueadas, sin cotización ni pago
+ok 5 - seis filas quedan bloqueadas, sin cotización ni pago
+  ---
+  duration_ms: 48.696619
+  ...
+# Subtest: pago simulado libera y retira solo saldos ficticios
+ok 6 - pago simulado libera y retira solo saldos ficticios
+  ---
+  duration_ms: 3.134749
+  ...
+# Subtest: repetir pago retorna mismo resultado sin otra transición
+ok 7 - repetir pago retorna mismo resultado sin otra transición
+  ---
+  duration_ms: 2.505661
+  ...
+# Subtest: orden inexistente nunca genera pago
+ok 8 - orden inexistente nunca genera pago
+  ---
+  duration_ms: 2.253304
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 205.769947
