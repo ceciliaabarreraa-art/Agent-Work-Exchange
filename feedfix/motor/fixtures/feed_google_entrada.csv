@@ -1,0 +1,7 @@
+id,title,description,link,image_link,price,availability,condition,brand,gtin
+SYN-001,Producto de prueba 1,Descripcion sintetica 1,https://shop.example.invalid/p/SYN-001,https://shop.example.invalid/i/SYN-001.jpg,19.90 USD,In Stock,new,Marca ficticia,
+SYN-002,Producto de prueba 2,Descripcion sintetica 2,https://shop.example.invalid/p/SYN-002,https://shop.example.invalid/i/SYN-002.jpg,12.00 USD,in_stock,new,Marca ficticia,1234567890123
+SYN-003,Producto de prueba 3,Descripcion sintetica 3,https://shop.example.invalid/p/SYN-003,https://shop.example.invalid/i/SYN-003.jpg,,out_of_stock,new,Marca ficticia,
+SYN-004,Producto de prueba 4A,Descripcion sintetica 4A,https://shop.example.invalid/p/SYN-004-A,https://shop.example.invalid/i/SYN-004-A.jpg,8.00 USD,in_stock,new,Marca ficticia,
+SYN-004,Producto de prueba 4B,Descripcion sintetica 4B,https://shop.example.invalid/p/SYN-004-B,https://shop.example.invalid/i/SYN-004-B.jpg,9.00 USD,in_stock,new,Marca ficticia,
+SYN-005,Producto de prueba 5,Descripcion sintetica 5,https://shop.example.invalid/p/SYN-005,https://shop.example.invalid/i/SYN-005.jpg,7.20 USD,available,new,Marca ficticia,

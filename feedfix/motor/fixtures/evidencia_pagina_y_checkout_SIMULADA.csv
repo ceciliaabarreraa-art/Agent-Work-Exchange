@@ -1,0 +1,2 @@
+id,market,currency,landing_price,checkout_price,availability,observed_at,evidence_type
+SYN-001,US,USD,24.90 USD,24.90 USD,in_stock,2026-11-09T14:30:00Z,mocked_no_real_network

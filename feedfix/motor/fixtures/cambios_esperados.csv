@@ -1,0 +1,3 @@
+id,numero_linea_csv,campo,antes,despues,regla_de_prueba,fuente_de_prueba
+SYN-001,2,price,19.90 USD,24.90 USD,PRICE_FROM_AUTHORIZED_MATCH,fuente_autorizada.csv:2
+SYN-001,2,availability,In Stock,in_stock,AVAILABILITY_FROM_AUTHORIZED_MATCH,fuente_autorizada.csv:2

@@ -1,0 +1,2 @@
+id,market,currency,price,availability,observed_at,source_type
+SYN-001,US,USD,24.90 USD,in_stock,2026-11-09T14:30:00Z,synthetic_authorized_catalog

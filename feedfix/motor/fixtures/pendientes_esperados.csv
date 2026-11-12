@@ -1,0 +1,6 @@
+id,numero_linea_csv,campo,codigo,estado,severidad,accion
+SYN-002,3,gtin,GTIN_INVALID_CHECK_DIGIT,NEEDS_INFORMATION,blocking,Pedir GTIN asignado o evidencia aplicable
+SYN-003,4,price,PRICE_MISSING,NEEDS_INFORMATION,blocking,Pedir precio de la variante y fuente autorizada
+SYN-004,5,id,DUPLICATE_ID,NEEDS_INFORMATION,blocking,Pedir mapeo verificado sin renumerar ni eliminar
+SYN-004,6,id,DUPLICATE_ID,NEEDS_INFORMATION,blocking,Pedir mapeo verificado sin renumerar ni eliminar
+SYN-005,7,availability,AVAILABILITY_AMBIGUOUS,NEEDS_INFORMATION,blocking,Pedir disponibilidad concreta y fuente
