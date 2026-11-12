@@ -1,0 +1,45 @@
+{
+  "session_date_instructed": "2026-11-09",
+  "system_utc_observed": "2026-11-10T12:37:38.533540+00:00",
+  "clock_warning": "Reloj del sandbox no coincide con la fecha local de sesión; verificar hora externa antes de inferir vigencias.",
+  "rpc": "https://rpc.testnet.near.org",
+  "contract": "escrow.mi-tiendita-madre.testnet",
+  "read_only": true,
+  "transactions_sent": 0,
+  "cases": [
+    {
+      "method": "get_config",
+      "args": {},
+      "http_status": 200,
+      "block_height": 277068378,
+      "block_hash": "2TMuFn3Wy6mgNT2QfmAPoZBjp5SoULkQHK3s74RyLcfk",
+      "value": [
+        "mi-tiendita-madre.testnet",
+        "verifier.mi-tiendita-madre.testnet",
+        false,
+        200
+      ]
+    },
+    {
+      "method": "get_order",
+      "args": {
+        "order_id": 0
+      },
+      "http_status": 200,
+      "block_height": 277068383,
+      "block_hash": "46Uzn8Jt1FKpv3SJkMFRp8y6bZjtg5XzH6L7DFw89j6G",
+      "value": {
+        "id": 0,
+        "buyer": "buyer.mi-tiendita-madre.testnet",
+        "seller": "seller.mi-tiendita-madre.testnet",
+        "verifier": "verifier.mi-tiendita-madre.testnet",
+        "gross_amount": "20000000000000000000000",
+        "fee_amount": "400000000000000000000",
+        "seller_amount": "19600000000000000000000",
+        "status": "Released",
+        "delivery_hash": "761c8e432741c46ae1e430f4a88c7ac47a7695a8d435c10fb0103f0c619ec301",
+        "delivery_ref": "delivery.txt"
+      }
+    }
+  ]
+}
