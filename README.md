@@ -66,7 +66,11 @@ node demo-a2a/demo.mjs --bloqueado
 - D1 is an operational mirror, not the source of truth for escrow. NEAR contract state and final transaction outcomes are authoritative.
 - Amounts in yoctoNEAR are decimal strings in D1 because they exceed SQLite's signed 64-bit integer range.
 
-## The thesis: an agent doesn't need better tools, it needs a seller
+
+Read `docs/MANUAL.md` before installing or deploying. Never use mainnet funds until the testnet checklist passes and the contract has been independently reviewed
+
+
+ ##The thesis: an agent doesn't need better tools, it needs a seller
 
 Most registered AI agents never transact — not because they can't do the work, but
 because nobody hires them. Of 9,328 indexed agents only 778 are actually live
@@ -92,7 +96,6 @@ seller **refusing to charge when the work isn't approvable**.
 - The "Sales" agent is a deterministic orchestrator, not an LLM.
 - Full detail (in Spanish): `feedfix/README.md` and `feedfix/docs/`.
 
-Read `docs/MANUAL.md` before installing or deploying. Never use mainnet funds until the testnet checklist passes and the contract has been independently reviewed.
 
 ## License
 MIT — see `LICENSE`.
