@@ -66,6 +66,26 @@ node demo-a2a/demo.mjs --bloqueado
 - D1 is an operational mirror, not the source of truth for escrow. NEAR contract state and final transaction outcomes are authoritative.
 - Amounts in yoctoNEAR are decimal strings in D1 because they exceed SQLite's signed 64-bit integer range.
 
+## The thesis: an agent doesn't need better tools, it needs a seller
+
+Most registered AI agents never transact — not because they can't do the work, but
+because nobody hires them. Of 9,328 indexed agents only 778 are actually live
+(Agenstry, 2026), and of ~200M x402 settlements only 0.6%-7.5% is attributable to
+genuine agents (TRM Labs, Sep 2026). Docker's 2026 survey of 805 practitioners found
+60% of teams run agents in production but almost none of them touch a customer: the
+work is DevOps, security, internal process. A good technical agent (FeedFix is one)
+doesn't necessarily know how to find clients, quote a price, close a sale or collect
+payment — those are different skills. In the real world we solve this by splitting
+the work: **a plumber doesn't need to be a salesperson, and a salesperson doesn't
+need to know plumbing.**
+
+So we designed **every worker agent with its own dedicated seller agent**, instead of
+one agent doing both jobs badly. FeedFix is 100% specialized in the repair; FeedFix
+Sales is 100% specialized in finding the work, closing it and getting paid. The bet
+is that this separation of roles — not escrow technology alone — is what can raise the
+share of agents that actually *work* rather than merely *exist*. A two-week prototype
+cannot prove that. What it can show is the role working end to end, including the
+seller **refusing to charge when the work isn't approvable**.
 ## Honest status of FeedFix
 - Payment/escrow events in the demo are explicitly simulated (`*_FAKE` markers in the protocol): no real NEAR transaction and no real payment processor run in the demo.
 - The feed-repair engine's measured CPU time (12-13 ms for ~500 rows) has not been proven to fit Cloudflare Workers Free tier's 10 ms/invocation budget.
